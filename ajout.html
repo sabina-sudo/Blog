@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/90810e52a9.js" crossorigin="anonymous"></script>
+    <title>administration</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-secondary text-white">
+            <a href="home.html" class="navbar-brand text-white">Mon blog</a>
+            <form class="form-inline">
+                <i class="fa-solid fa-power-off"></i><button class="btn text-white border-0 my-2 my-sm-0" type="submit">Se déconnecter</button>
+            </form>
+          </nav> 
+    </header>
+    <main>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action " id="home" data-toggle="list" href="#Tableau-de-bord" role="tab" aria-controls="home"><i class="fa-solid fa-house"></i>Tableau de bord</a>
+            <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list" href="#Gestions-des-Articles" role="tab" aria-controls="profile">Gestions des Articles</a>
+            <a class="list-group-item list-group-item-action active" id="catégories" data-toggle="list" href="#Gestion-des-Categories" role="tab" aria-controls="catégories"><i class="fa-solid fa-folder"></i>Gestion des Categories</a>
+            <a class="list-group-item list-group-item-action" id="tags" data-toggle="list" href="#Tags" role="tab" aria-controls="tags"><i class="fa-solid fa-tags"></i>Tags</a>
+            <a class="list-group-item list-group-item-action" id="fichiers" data-toggle="list" href="#Fichiers" role="tab" aria-controls="fichiers"><i class="fa-solid fa-file"></i>Fichiers</a>
+            <a class="list-group-item list-group-item-action" id="paramétres" data-toggle="list" href="#Paramétres" role="tab" aria-controls="paramétres">Paramétres</a>
+            <a class="list-group-item list-group-item-action" id="utilisateurs" data-toggle="list" href="#Utilisateurs" role="tab" aria-controls="utilisateurs"><i class="fa-solid fa-users"></i>Utilisateurs</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade" id="Tableau-de-bord" role="tabpanel" aria-labelledby="Tableau-de-bord">...</div>
+            <div class="tab-pane fade show active" id="Gestions-des-Articles" role="tabpanel" aria-labelledby="Gestions des Articles">
+                    <div class="row mr-3 mt-3">
+                        <h6 class="col-lg-2 font-weight-bold">Rédiger un article</h6>
+                        <a href="admin.html" class="btn btn-info col-lg-1 offset-lg-9"><button type="button" class="btn btn-info ">Valider</button></a>
+                    </div>
+                   <div>
+                    <form>
+                        <div class="form-group mr-3">
+                            <label for="formGroupExampleInput">Catégorie de l'article</label>
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>vacance</option>
+                                <option value="1">...</option>
+                                <option value="2">......</option>
+                                <option value="3">.....</option>
+                              </select>
+                          </div>
+                        <div class="form-group mr-3">
+                          <label for="formGroupExampleInput">Titr de l'article</label>
+                          <input type="text" class="form-control " id="formGroupExampleInput" placeholder="Lorem ipsum dolor sit amet consectetur">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                          </div>
+                        <div class="form-group mr-3">
+                            <label for="exampleFormControlTextarea1">Contenu de l'article</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam porro quos magnam, doloribus excepturi consequuntur numquam blanditiis expedita quae hic! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem laborum laboriosam enim eligendi. Esse."></textarea>
+                          </div>
+                      </form>
+                   </div>
+            </div>
+            <div class="tab-pane fade" id="Gestion-des-Categories" role="tabpanel" aria-labelledby="catégories">
+                <div class="row mr-3 mt-3">
+                    <h6 class="col-lg-3 font-weight-bold">Ajouter une catégorie</h6>
+                    <button type="button" class="btn btn-info col-lg-1 offset-lg-8">Valider</button>
+                </div>
+                <div>
+                    <form>
+                        <div class="form-group mr-3">
+                          <label for="formGroupExampleInput">Titr de la catégorie</label>
+                          <input type="text" class="form-control " id="formGroupExampleInput" placeholder="Lorem ipsum dolor sit amet consectetur">
+                        </div>
+                        <div class="form-group mr-3">
+                            <label for="exampleFormControlTextarea1">Contenu de la catégorie</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam porro quos magnam, doloribus excepturi consequuntur numquam blanditiis expedita quae hic! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem laborum laboriosam enim eligendi. Esse."></textarea>
+                          </div>
+                      </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Tags" role="tabpanel" aria-labelledby="list-settings-list">Tags</div>
+            <div class="tab-pane fade" id="Fichiers" role="tabpanel" aria-labelledby="list-settings-list">Fichiers</div>
+            <div class="tab-pane fade" id="Paramétres" role="tabpanel" aria-labelledby="list-settings-list">Paramétres</div>
+            <div class="tab-pane fade" id="Utilisateurs" role="tabpanel" aria-labelledby="list-settings-list">Utilisateurs</div>
+          </div>
+        </div>
+      </div>
+            <!-- <div class="row ">
+                <div class="col-4 bg-light ">
+                  <div class="list-group  bg-light " id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action border-0 text-primary pl-3" id="list-profile-list " data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fa-solid fa-house pr-3"></i>Tableau de bord</a>
+                    <a class="list-group-item list-group-item-action active text-white border-0 pl-3 " id="list-home-list" data-toggle="list" href="administration.html" role="tab" aria-controls="home">Gestions des Articles</a>
+                    <a class="list-group-item list-group-item-action border-0 text-primary pl-3 " id="list-messages-list" data-toggle="list" href="catégorie.html" role="tab" aria-controls="messages"><i class="fa-solid fa-folder pr-3"></i>Gestion des Categories</a>
+                    <a class="list-group-item list-group-item-action border-0 text-primary pl-3 " id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa-solid fa-tag pr-3"></i>Tags</a>
+                    <a class="list-group-item list-group-item-action border-0 text-primary  pl-3 " id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa-solid fa-file pr-3"></i>Fichiers</a>
+                    <a href="#" class="list-group-item disabled border-0 pl-3 " aria-disabled="true">Paramètres</a>
+                    <a class="list-group-item list-group-item-action border-0 text-primary  pl-3 " id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa-solid fa-users pr-3"></i>utilisateurs</a>
+
+
+                  </div>
+                </div>
+                <div class="col-8  pl-4">
+                    <nav class="navbar navbar-light ">
+                        <h3 class="navbar-brand">Rédiger un article</h3>
+                        <form class="form-inline">
+                            <button class="btn btn-primary my-2 my-sm-0 pl-4 pr-4" type="submit">Valider</button>
+                          </form>
+                        
+                    </nav>
+              <form >
+                <label class="m-2" >Titre de la catégorie</label>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Vacance</option>
+                      <option>Sport</option>
+                      <option>Voyage</option>
+                      
+                    </select>
+                  </div>
+
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Titre de l'article</label>
+                      <input class="form-control" type="text" placeholder="lorem ipsum dolor sit amet consectetur">
+
+                      <input type="file" class="form-control-file mt-4" id="exampleFormControlFile1" >
+                    </div>
+                  </form>
+                                
+                <div class="form-group p-2">
+                  <label for="exampleFormControlTextarea1">Contenu de l'article</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="13" ></textarea>
+                </div>
+              
+
+              </form>
+
+              
+                   
+            
+        
+    </div> -->
+    </main>
+    <footer class="bg-secondary fixed-bottom">
+        <img src="img/logo-3w-Academy.jpg" />
+        <p>Ce matériel pédagogique est la propriété de la 3W Academy cet exercice est blog réalisé par 3wa..</p>
+    </footer>
+</body>
+</html>
